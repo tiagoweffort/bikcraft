@@ -1,0 +1,69 @@
+.introducao-bg {
+  background: var(--cor-12) url("../../img/dec/bottom-left.svg") no-repeat bottom 160px left 20px;
+  box-shadow: inset 0 -120px var(--cor-0);
+}
+
+.introducao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px 40px;
+  /* max-width: 1200px;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto; foi trocado pela tag .container em componentes */
+}
+/* .introducao p,
+.introducao a {
+  grid-column: 1;
+}
+.introducao img {
+  grid-column: 2;
+  grid-row: 1/3;
+} estilo descartado em razão do uso de uma div para conter os elementos da introducao, deixando os conteudos que eram pra ficar a direita na div e a imagem que deve estar alocada à esquerda de fora da div*/
+
+.introducao-conteudo {
+  align-self: end;
+  padding-bottom: 200px;
+}
+/* .introducao-imagem {
+  margin-bottom: -120px;
+} o problema é que o proximo elemento ficará na linha da extremidade inferior da imagem e esta ficará sobreposta ao conteudo. a solucao é criar uma sombra no .introducao-bg  */
+
+.introducao img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.introducao h1 {
+  margin-bottom: 32px;
+}
+
+.introducao p {
+  margin-bottom: 20px;
+  color: #b2b2b2;
+}
+
+@media (max-width: 800px) {
+  .introducao-bg {
+    background: var(--cor-11);
+    padding-top: 40px;
+    box-shadow: inset 0 -60px var(--cor-0);
+  }
+  .introducao {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .introducao-conteudo {
+    padding-bottom: 0px;
+  }
+  .introducao h1 {
+    margin-bottom: 16px;
+  }
+  .introducao img {
+    height: 300px;
+    width: 100%;
+  }
+}
